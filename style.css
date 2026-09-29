@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #450920,
+        #5c0b2b,
+        #450920
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   MATCH HEADING
+========================= */
+
+body > h1:first-child {
+    font-size: 50px;
+    letter-spacing: 10px;
+
+    margin-bottom: 50px;
+
+    color: #F9DBBD;
+
+    text-shadow:
+        0 0 10px rgba(249, 219, 189, 0.4),
+        0 0 25px rgba(249, 219, 189, 0.2);
+}
+
+
+/* =========================
+   PLAYER AREA
+========================= */
+
+.player-space {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   PLAYER CARD
+========================= */
+
+.players {
+    width: 300px;
+
+    padding: 35px 30px;
+
+    background: rgba(255, 165, 171, 0.12);
+
+    border: 1px solid rgba(249, 219, 189, 0.25);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.players:hover {
+    transform: translateY(-8px);
+
+    border-color: #DA627D;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(218, 98, 125, 0.25);
+}
+
+
+/* =========================
+   PLAYER BUTTON
+========================= */
+
+.players button {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #A53860,
+        #DA627D
+    );
+
+    color: #F9DBBD;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(165, 56, 96, 0.4);
+
+    transition: 0.25s ease;
+}
+
+
+/* Button Hover */
+
+.players button:hover {
+
+    transform: scale(1.04);
+
+    background: linear-gradient(
+        135deg,
+        #DA627D,
+        #FFA5AB
+    );
+
+    color: #450920;
+
+    box-shadow:
+        0 10px 30px rgba(218, 98, 125, 0.5);
+}
+
+
+/* Button Click */
+
+.players button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   SCORE TEXT
+========================= */
+
+.players h2 {
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    color: #F9DBBD;
+}
+
+
+/* =========================
+   SCORE NUMBER
+========================= */
+
+.players span {
+
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: 65px;
+
+    font-weight: bold;
+
+    color: #FFA5AB;
+
+    text-shadow:
+        0 0 10px rgba(255, 165, 171, 0.6),
+        0 0 25px rgba(255, 165, 171, 0.3);
+}
+
+
+/* =========================
+   CHECK SCORE BUTTON
+========================= */
+
+#checkScore {
+
+    margin-top: 50px;
+
+    padding: 17px 45px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #F9DBBD;
+
+    color: #450920;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(249, 219, 189, 0.25);
+
+    transition: 0.25s ease;
+}
+
+
+/* Check Hover */
+
+#checkScore:hover {
+
+    transform: scale(1.06);
+
+    background: #FFA5AB;
+
+    box-shadow:
+        0 10px 30px rgba(255, 165, 171, 0.4);
+}
+
+
+/* Check Click */
+
+#checkScore:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   WINNER RESULT
+========================= */
+
+#result {
+
+    margin-top: 35px;
+
+    min-height: 45px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #F9DBBD;
+
+    text-shadow:
+        0 0 10px rgba(249, 219, 189, 0.6),
+        0 0 25px rgba(249, 219, 189, 0.3);
+}
+
+
+/* =========================
+   SCORES HEADING
+========================= */
+
+body > h1:last-of-type {
+
+    margin-top: 70px;
+
+    font-size: 30px;
+
+    letter-spacing: 6px;
+
+    color: #FFA5AB;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 35px 15px;
+    }
+
+    body > h1:first-child {
+        font-size: 38px;
+        letter-spacing: 6px;
+    }
+
+    .player-space {
+        gap: 25px;
+    }
+
+    .players {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    #result {
+        font-size: 24px;
+    }
+}
